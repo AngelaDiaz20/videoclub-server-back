@@ -2,8 +2,14 @@
 
 
 <h3>Archive  routes<h3/>
-
+ 
 <h4>Binder routes.js</h4>
+    
+```routes
+import { addMovie, getMovies, getMovie, editMovie, deleteMovie} from '../controller/user-controller.js';
+```
+In this case, in the routes folder, properties called from the controller are imported to start routing each method.
+    
 
 
 <h3>Archive  database</h3>
