@@ -1,6 +1,8 @@
 # videoclub-server-back
 
-Inserte aquí documentación
+<h2>Archive  routes</h2>
+### Binder routes.js
+
 
 <h2>Archive  database</h2>
 
