@@ -105,6 +105,21 @@ Esta sección tiene una lista de los principales marcos/bibliotecas que utilicé
   In this function it will contain 2 necessary properties that are needed to make the connection in the databases, it is the username and password.
 
   ```Connection Database
+  const URL = `mongodb://${username}:${password}@ac-tuor9qz-shard-00-00.aha85bo.mongodb.net:27017,ac-tuor9qz-shard-00-01.aha85bo.mongodb.net:27017,ac-tuor9qz-shard-00-
+  ```
+    //First, the code in try is executed
+    //if there were no errors,catch execution is ignored
+    try {
+        //The await keyword before any expression that returns a promise
+        await mongoose.connect(URL, {useUnifiedTopology: true, useNewUrlParser: true});
+        console.log('Database connected succesfully')
+    } catch (e) {
+        console.log('Error while connecting with the database', e)
+    }
+}
+
+export default Connection;
+
   const URL = `mongodb://${Videoclub}:${movies}@movies.8wsfgdc.mongodb.net/?retryWrites=true&w=majority`;
   ```
   The constant variable URL will contain the link of the Mongo Atlas database in the cloud this link will contain two parameters of username and password.
