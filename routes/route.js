@@ -9,3 +9,11 @@ import { addMovie, getMovies, getMovie, editMovie, deleteMovie} from '../control
 //const variable will contain the methods of the routes
 const router = express.Router();
 
+//methods are used to send requests from post, get and put delete
+router.post('/add',addMovie);
+router.get('', getMovies);
+router.get('/:id', getMovie);
+router.put('/:id', editMovie);
+router.delete('/:id', deleteMovie)
+
+export default router;
