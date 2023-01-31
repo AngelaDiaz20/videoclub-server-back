@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+// established data types
 const movieSchema = mongoose.Schema({
   id: Number,
   title: String,
@@ -10,6 +11,7 @@ const movieSchema = mongoose.Schema({
   country: String,
 });
 
+// reasigment the table and data types to const movie
 const movie = mongoose.model('movie', movieSchema);
 
 export default movie;
