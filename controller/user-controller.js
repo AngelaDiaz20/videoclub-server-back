@@ -1,7 +1,7 @@
 import { request, response } from "express";
 import Movie from "../schema/user-schema.js";
 
-
+//Function to add a movie
 export const addMovie = async (request, response) => {
     const movie = request.body;
 
@@ -15,6 +15,7 @@ export const addMovie = async (request, response) => {
     }
 }
 
+//Function to get a movie
 export const getMovies = async (request, response) =>{
     try {
         const movies = await Movie.find({});
@@ -24,6 +25,7 @@ export const getMovies = async (request, response) =>{
     }
 }
 
+//Function to get a movie by id
 export const getMovie= async (request, response) => {
     try {
         //const movie = await Movie.find({_id: request.params.id});
@@ -34,6 +36,7 @@ export const getMovie= async (request, response) => {
     }
 }
 
+//Function to update a movie
 export const editMovie = async (request, response) => {
     let movie = request.body;
     const editMovie = new Movie(movie);
@@ -47,6 +50,7 @@ export const editMovie = async (request, response) => {
     
 }
 
+//Function to delete a movie
 export const deleteMovie = async (request, response) => {
     try {
         await Movie.deleteOne({_id: request.params.id});
