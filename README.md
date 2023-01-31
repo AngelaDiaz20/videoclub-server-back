@@ -10,7 +10,13 @@ import { addMovie, getMovies, getMovie, editMovie, deleteMovie} from '../control
 ```
 In this case, in the routes folder, properties called from the controller are imported to start routing each method.
     
-
+```methods 
+router.post('/add',addMovie);
+router.get('', getMovies);
+router.get('/:id', getMovie);
+router.put('/:id', editMovie);
+router.delete('/:id', deleteMovie)
+```
 
 <h3>Archive  database</h3>
 
