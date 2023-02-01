@@ -73,7 +73,24 @@ Esta sección tiene una lista de los principales marcos/bibliotecas que utilicé
 
 ## Documentacion tecnica
 * <h3>Controladores</h3>
+  
+  ```javascript
+    export const editMovie = async (request, response) => {
+      let movie = request.body;
+      const editMovie = new Movie(movie);
 
+      try {
+          await Movie.updateOne({_id: request.params.id}, editMovie);
+          response.status(201).json(editMovie);
+      } catch (e) {
+          response.status(409).json({message: e.message});
+      }
+
+    }
+  ```
+  
+Voy a tomar como referencia el metodo de actualizar datos en el controlador, ya que los demas metodos son demasiado parecidos entonces no creo que tenga que explicar cada uno de ellos, en este metodo tenemos una funcion asincrona la cual nos exije 2 parametros que son propios de express los cuales son request y response. Se crea una variable local de tipo let llamada movie y le asignamos los valores del metodo request.body el cual sirve para obtener los valores que un formulario se envía a nuestra API, creamos una constante editMovie y le asignamos el valor de una nueva instacia para crear una nueva pelicula a la cual le pasamos como parametro la variable local movie, luego usamos un try/catch para manejar la parte de los errores, el try nos devuelve la respuesta asincrona, llamamos a la variable local movie e ingresamos a las propiedades y llamamos al metodos http rest updateOne, seguido a esto le pasamos como parametro la id que se encuentra en la base de datos, con la constante que creamos anteriormente, la respuesta de esto va a ser un response.status para conocer el estado en el que se encuentra la ejecucion del metodo en este caso es el 201 que nos devuelve un estado de creado, lo convertimos a un json para que se pueda leer y le pasamos como parametro la constante editMovie que tienen todos los datos de la actualización, en el catch nos trae un response.status(409) el cual nos indica que tenemos conflictos al momento de cambiar algun dato y lo imprimimos para que se pueda visualizar el error.
+  
 * <h3>Esquema</h3>
 
 * <h3>Index</h3>
