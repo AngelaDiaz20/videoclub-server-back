@@ -47,7 +47,7 @@
 
 En este proyecto utilizamos algunas tecnologias basicas, utilizamos la metodologia scrum para trabajar en equipo y sacar este proyecto adelante, es un crud básico pero el verdadero reto fue trabajar en equipo para sacarlo adelante
 
-![logoMovies](https://user-images.githubusercontent.com/50422794/215850146-7b181445-b245-4b1a-b488-820db067f12b.png)
+![si](https://user-images.githubusercontent.com/50422794/216082800-9033a27f-8ed7-42ba-804f-257c6250111d.jpeg)
 
 La aplicacion nos permite tanto visualizar como agregar peliculas, con sus respectivos datos, nos permite filtrar por nombres, agregar peliculas como lo mencioné previamente, se tiene la posibilidad de editar y borrar peliculas
 
@@ -65,8 +65,9 @@ Esta sección tiene una lista de los principales marcos/bibliotecas que utilicé
 * <a href="https://nodejs.org/es/">![image](https://user-images.githubusercontent.com/50422794/215834151-4c767188-7bfa-406e-9967-9c07dc4f737f.png)</a>
 * <a href="https://mui.com/">![image](https://user-images.githubusercontent.com/50422794/215833458-26ad6ecd-120d-4153-bd96-291f950f034c.png)</a>
 * <a href="https://sweetalert2.github.io/#native_link#">![image](https://user-images.githubusercontent.com/50422794/215833564-1e1010ba-b3ce-4097-adac-6c5588a9e74a.png)</a>
-* <a href="https://www.npmjs.com/package/axios">![image](https://user-images.githubusercontent.com/50422794/215833618-06eef285-0ac3-46be-ac0c-44bc311dc823.png)
-</a>
+* <a href="https://www.npmjs.com/package/axios">![image](https://user-images.githubusercontent.com/50422794/215833618-06eef285-0ac3-46be-ac0c-44bc311dc823.png)</a>
+* <a href="https://momentjs.com/">![image](https://user-images.githubusercontent.com/50422794/216081356-9b70f327-9a2f-4a2a-9102-f86f8ca4eb8a.png)</a>
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
