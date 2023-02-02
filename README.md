@@ -108,26 +108,17 @@ Voy a tomar como referencia el metodo de actualizar datos en el controlador, ya 
  El esquema creado permite asociar la variable y el tipo de dato que se va a guardar en cada colección, teniendo así una estructura definida para los datos.
  
 * <h3>Index</h3>
-  ```
-    import express from 'express';
-    import dotenv from 'dotenv';
-    import cors from 'cors';
-    import bodyParser from 'body-parser';
-
-    import Connection from './database/db.js';
-    import Routes from './routes/route.js';
-   ```
+  
  Se realiza la importación de las dependecias y modulos que se van a usar, siendo estos:
-  * Express
+  * Express:
     Permite utilizar express como framework de node.
-  * dotenv
+  * dotenv:
     Permite acceder y modificar variables de ambiente, en el desarrollo sera utilizado para modificar el usuario y la clave de la base de datos.
-   *cors
+  * cors:
     Permite tener acceso entre los diferentes servidores que se utilizan.
-   *body-parser
-   Esta libreria permite el acceso al body de la petición en formato json().
-    
-
+  * body-parser:
+    Esta libreria permite el acceso al body de la petición en formato json().
+   ```
     const app = express();
 
     dotenv.config();
@@ -146,6 +137,9 @@ Voy a tomar como referencia el metodo de actualizar datos en el controlador, ya 
     Connection(username, password);
 
     app.listen(PORT, () => console.log(`Server is running successfully on PORT ${PORT}`));
+   ```
+
+Se definen las dependencias y como estas son usadas, además se determina el puerto que se utilizara. Luego se realiza la asignación del usuario y contraseña y se envian como parametros al modulo Conecction. Finalmente se deja un mensaje que permite visualizar la correcta conexión.
 
 * <h3>Archive routes<h3/>
 
