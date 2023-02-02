@@ -94,7 +94,58 @@ Voy a tomar como referencia el metodo de actualizar datos en el controlador, ya 
   
 * <h3>Esquema</h3>
 
+```
+    const movieSchema = mongoose.Schema({
+      id: Number,
+      title: String,
+      year: Number,
+      time: Number,
+      language: String,
+      release: Date,
+      country: String,
+    });
+  ```
+ El esquema creado permite asociar la variable y el tipo de dato que se va a guardar en cada colección, teniendo así una estructura definida para los datos.
+ 
 * <h3>Index</h3>
+  ```
+    import express from 'express';
+    import dotenv from 'dotenv';
+    import cors from 'cors';
+    import bodyParser from 'body-parser';
+
+    import Connection from './database/db.js';
+    import Routes from './routes/route.js';
+   ```
+ Se realiza la importación de las dependecias y modulos que se van a usar, siendo estos:
+  * Express
+    Permite utilizar express como framework de node.
+  * dotenv
+    Permite acceder y modificar variables de ambiente, en el desarrollo sera utilizado para modificar el usuario y la clave de la base de datos.
+   *cors
+    Permite tener acceso entre los diferentes servidores que se utilizan.
+   *body-parser
+   Esta libreria permite el acceso al body de la petición en formato json().
+    
+
+    const app = express();
+
+    dotenv.config();
+
+    app.use(bodyParser.json({exteng: true}));
+    app.use(bodyParser.urlencoded({extended: true}));
+    app.use(cors());
+
+    app.use('/', Routes);
+
+    const PORT = 8000;
+
+    const username = process.env.DB_USERNAME;
+    const password = process.env.DB_PASSWORD;
+
+    Connection(username, password);
+
+    app.listen(PORT, () => console.log(`Server is running successfully on PORT ${PORT}`));
 
 * <h3>Archive routes<h3/>
 
